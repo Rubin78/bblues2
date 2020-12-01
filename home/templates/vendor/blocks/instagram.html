@@ -1,0 +1,23 @@
+<!-- instagram -->
+{% load wagtailcore_tags %}
+
+<section class="pb-1 no-overflow">
+    <div class="container">
+    <div class="row gutter-1">
+    <div class="col-md-6 col-lg-4 level-1">
+        <div class="card card-equal bg-primary text-white">
+            <div class="card-header p-4">
+                <i class="icon-instagram fs-30"></i>
+            </div>
+            <div class="card-footer p-4">
+                <h2 class="card-title fs-30 w-75">We are active on <a href="#!"  class="font-weight-bold underline">Instagram</a>
+                </h2>
+            </div>
+        </div>
+    </div>
+        {% for item in value.items %}
+            {% include_block item %}
+        {% endfor %}
+    </div>
+    </div>
+</section>

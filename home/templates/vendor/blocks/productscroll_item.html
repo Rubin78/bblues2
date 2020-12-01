@@ -1,0 +1,11 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo fill-770x1050-c100 as photo %}
+
+
+<div class="col-12">
+
+<figure class="equal zoom">
+    <img class="zoom-img" src="{{ photo.url }}" alt="Product">
+</figure>
+</div>

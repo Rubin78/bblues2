@@ -1,0 +1,26 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load static %}
+{% image value.photo1 fill-417x417-c100 as photo1 %}
+{% image value.photo2 fill-417x417-c100 as photo2 %}
+{% image value.photo3 fill-417x417-c100 as photo3 %}
+{% image value.photo4 fill-417x417-c100 as photo4 %}
+{% image value.photo5 fill-417x417-c100 as photo5 %}
+
+
+<div class="col-md-6 col-lg-8">
+    <div class="owl-carousel owl-carousel-alt visible" data-items="[2,2,1,1]" data-margin="10" data-loop="true"
+         data-nav="true">
+        <figure class="equal"><a class="image image-fade" href="{% pageurl value.link %}"
+                                 style="background-image: url({{ photo1.url }})"></a></figure>
+          <figure class="equal"><a class="image image-fade" href="{% pageurl value.link %}"
+                                 style="background-image: url({{ photo2.url }})"></a></figure>
+          <figure class="equal"><a class="image image-fade" href="{% pageurl value.link %}"
+                                 style="background-image: url({{ photo3.url }})"></a></figure>
+          <figure class="equal"><a class="image image-fade" href="{% pageurl value.link %}"
+                                 style="background-image: url({{ photo4.url }})"></a></figure>
+          <figure class="equal"><a class="image image-fade" href="{% pageurl value.link %}"
+                                 style="background-image: url({{ photo5.url }})"></a></figure>
+
+
+    </div>
+</div>
